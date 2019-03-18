@@ -1,0 +1,18 @@
+2019-03-14 10:18:25.910 [main] DEBUG com.dd.o2o.dao.ShopAuthMapDao.insertShopAuthMap - ==>  Preparing: INSERT INTO tb_shop_auth_map(employee_id,shop_id, title,title_flag,create_time,last_edit_time,enable_status) VALUES (?,?, ?,?,?,?,?) 
+2019-03-14 10:18:25.979 [main] DEBUG com.dd.o2o.dao.ShopAuthMapDao.insertShopAuthMap - ==> Parameters: 1(Long), 1(Long), CEO(String), 1(Integer), 2019-03-14 10:18:25.391(Timestamp), 2019-03-14 10:18:25.391(Timestamp), 1(Integer)
+2019-03-14 10:18:25.984 [main] DEBUG com.dd.o2o.dao.ShopAuthMapDao.insertShopAuthMap - <==    Updates: 1
+2019-03-14 10:18:26.000 [main] DEBUG c.d.o.d.S.queryShopAuthMapListByShopId - ==>  Preparing: select smap.shop_auth_id, smap.title, smap.title_flag, smap.create_time, smap.last_edit_time, smap.enable_status, p.user_id, p.name, s.shop_id, s.shop_name from tb_shop_auth_map smap, tb_person_info p, tb_shop s where smap.employee_id=p.user_id and smap.shop_id=s.shop_id and smap.shop_id= ? LIMIT ?,?; 
+2019-03-14 10:18:26.002 [main] DEBUG c.d.o.d.S.queryShopAuthMapListByShopId - ==> Parameters: 1(Long), 0(Integer), 1(Integer)
+2019-03-14 10:18:26.015 [main] DEBUG c.d.o.d.S.queryShopAuthMapListByShopId - <==      Total: 1
+2019-03-14 10:18:26.022 [main] DEBUG com.dd.o2o.dao.ShopAuthMapDao.queryShopAuthMapById - ==>  Preparing: select smap.shop_auth_id, smap.title, smap.title_flag, smap.create_time, smap.last_edit_time, smap.enable_status, p.user_id, p.name, s.shop_id, s.shop_name from tb_shop_auth_map smap, tb_person_info p, tb_shop s where smap.employee_id=p.user_id and smap.shop_id=s.shop_id and smap.shop_id= ?; 
+2019-03-14 10:18:26.023 [main] DEBUG com.dd.o2o.dao.ShopAuthMapDao.queryShopAuthMapById - ==> Parameters: 1(Long)
+2019-03-14 10:18:26.027 [main] DEBUG com.dd.o2o.dao.ShopAuthMapDao.queryShopAuthMapById - <==      Total: 1
+2019-03-14 10:18:26.028 [main] DEBUG c.d.o.d.ShopAuthMapDao.queryShopAuthCountByShopId - ==>  Preparing: select count(1) from tb_shop_auth_map smap, tb_person_info p, tb_shop s where smap.employee_id=p.user_id and smap.shop_id=s.shop_id and smap.shop_id= ? 
+2019-03-14 10:18:26.029 [main] DEBUG c.d.o.d.ShopAuthMapDao.queryShopAuthCountByShopId - ==> Parameters: 1(Long)
+2019-03-14 10:18:26.032 [main] DEBUG c.d.o.d.ShopAuthMapDao.queryShopAuthCountByShopId - <==      Total: 1
+2019-03-14 10:18:26.101 [main] DEBUG com.dd.o2o.dao.ShopAuthMapDao.updateShopAuthMap - ==>  Preparing: UPDATE tb_shop_auth_map SET title=?, title_flag=? WHERE shop_auth_id=? 
+2019-03-14 10:18:26.102 [main] DEBUG com.dd.o2o.dao.ShopAuthMapDao.updateShopAuthMap - ==> Parameters: CCO(String), 2(Integer), 1(Long)
+2019-03-14 10:18:26.111 [main] DEBUG com.dd.o2o.dao.ShopAuthMapDao.updateShopAuthMap - <==    Updates: 1
+2019-03-14 10:18:26.113 [main] DEBUG com.dd.o2o.dao.ShopAuthMapDao.deleteShopAuthMap - ==>  Preparing: DELETE FROM tb_shop_auth_map WHERE shop_auth_id = ? 
+2019-03-14 10:18:26.113 [main] DEBUG com.dd.o2o.dao.ShopAuthMapDao.deleteShopAuthMap - ==> Parameters: 1(Long)
+2019-03-14 10:18:26.117 [main] DEBUG com.dd.o2o.dao.ShopAuthMapDao.deleteShopAuthMap - <==    Updates: 1
